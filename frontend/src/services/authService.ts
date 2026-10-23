@@ -1,6 +1,6 @@
 import api, { setAccessToken } from './api';
-import type { ApiResponse, AuthTokens } from '../types/api';
-import type { User, LoginCredentials, RegisterPayload } from '../types/user';
+import type { ApiResponse } from '../types/api';
+import type { User, LoginCredentials, RegisterPayload, AuthTokens } from '../types/user';
 
 export const authService = {
   async register(payload: RegisterPayload): Promise<ApiResponse<{ user: User } & AuthTokens>> {

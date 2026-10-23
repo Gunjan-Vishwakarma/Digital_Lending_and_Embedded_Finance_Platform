@@ -3,13 +3,8 @@ import { formatCurrency, getRiskTierColor } from '../../utils/helpers';
 import {
   TrendingUp,
   DollarSign,
-  PieChart,
   Activity,
-  ArrowUpRight,
   ShieldAlert,
-  Calendar,
-  Layers,
-  CheckCircle,
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -19,7 +14,6 @@ import {
   YAxis,
   Tooltip,
   CartesianGrid,
-  Legend,
 } from 'recharts';
 
 interface FundedInvestment {
@@ -227,7 +221,7 @@ const PortfolioPage: React.FC = () => {
                   borderRadius: 'var(--radius-md)',
                   color: 'var(--color-text-primary)',
                 }}
-                formatter={(val: number) => [`$${val.toFixed(2)}`, '']}
+                formatter={(val: any) => [`$${Number(val).toFixed(2)}`, '']}
               />
               <Area
                 type="monotone"

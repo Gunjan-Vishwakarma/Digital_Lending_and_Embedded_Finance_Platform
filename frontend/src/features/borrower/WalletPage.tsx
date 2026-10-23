@@ -2,16 +2,12 @@ import React, { useState } from 'react';
 import { formatCurrency, formatDateTime } from '../../utils/helpers';
 import {
   Wallet,
-  ArrowUpRight,
-  ArrowDownLeft,
   Lock,
-  DollarSign,
   ShieldCheck,
   RefreshCw,
   Plus,
   Minus,
   X,
-  Check,
 } from 'lucide-react';
 import { v4 as uuidv4 } from 'uuid';
 

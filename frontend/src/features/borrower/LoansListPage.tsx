@@ -8,12 +8,9 @@ import {
   Clock,
   CheckCircle,
   Plus,
-  ArrowRight,
   Shield,
   Calendar,
-  AlertCircle,
   X,
-  CreditCard,
   Check,
 } from 'lucide-react';
 import { v4 as uuidv4 } from 'uuid';

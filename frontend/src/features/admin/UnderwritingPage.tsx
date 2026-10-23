@@ -2,19 +2,10 @@ import React, { useState } from 'react';
 import { formatCurrency, getRiskTierColor } from '../../utils/helpers';
 import type { RiskTier } from '../../types/loan';
 import {
-  Shield,
-  Activity,
   CheckCircle,
   XCircle,
   RotateCcw,
   Sparkles,
-  FileText,
-  User,
-  DollarSign,
-  TrendingUp,
-  AlertTriangle,
-  ArrowRight,
-  Info,
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -339,7 +330,7 @@ const UnderwritingPage: React.FC = () => {
                         borderRadius: 'var(--radius-md)',
                         fontSize: 12,
                       }}
-                      formatter={(val: number) => [val > 0 ? `+${val.toFixed(2)} impact` : `${val.toFixed(2)} impact`, 'SHAP Weight']}
+                      formatter={(val: any) => [Number(val) > 0 ? `+${Number(val).toFixed(2)} impact` : `${Number(val).toFixed(2)} impact`, 'SHAP Weight']}
                     />
                     <Bar dataKey="impact" radius={[4, 4, 4, 4]}>
                       {activeLoan.shapFeatures.map((entry, index) => (

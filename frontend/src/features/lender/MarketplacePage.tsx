@@ -1,20 +1,13 @@
 import React, { useState } from 'react';
-import { formatCurrency, formatPercentage, getRiskTierColor } from '../../utils/helpers';
+import { formatCurrency, getRiskTierColor } from '../../utils/helpers';
 import type { RiskTier } from '../../types/loan';
 import {
-  Store,
-  Filter,
-  DollarSign,
-  TrendingUp,
   ShieldCheck,
   Clock,
   Sparkles,
   CheckCircle,
   X,
-  AlertCircle,
-  Layers,
 } from 'lucide-react';
-import { v4 as uuidv4 } from 'uuid';
 
 interface MarketplaceLoan {
   id: string;
@@ -121,7 +114,6 @@ const MarketplacePage: React.FC = () => {
   const [investAmount, setInvestAmount] = useState<string>('1000');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [fundSuccess, setFundSuccess] = useState(false);
-  const [lastIdempotencyKey, setLastIdempotencyKey] = useState('');
 
   const filteredLoans = loans.filter((l) => {
     if (selectedTier !== 'ALL' && l.riskTier !== selectedTier) return false;
@@ -133,7 +125,6 @@ const MarketplacePage: React.FC = () => {
     setSelectedLoan(loan);
     const remaining = loan.requestedAmount - loan.fundedAmount;
     setInvestAmount(Math.min(1000, remaining).toString());
-    setLastIdempotencyKey(uuidv4());
     setFundSuccess(false);
   };
 

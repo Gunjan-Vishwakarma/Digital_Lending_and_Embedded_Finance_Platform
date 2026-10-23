@@ -1,15 +1,9 @@
 import React, { useState } from 'react';
 import { formatDateTime } from '../../utils/helpers';
 import {
-  ClipboardList,
-  Search,
-  Filter,
   Download,
   ShieldCheck,
-  CheckCircle,
   Lock,
-  Calendar,
-  FileSpreadsheet,
 } from 'lucide-react';
 
 interface AuditLogEntry {

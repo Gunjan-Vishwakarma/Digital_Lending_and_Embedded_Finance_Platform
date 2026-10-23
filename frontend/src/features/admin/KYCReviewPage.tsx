@@ -1,18 +1,12 @@
 import React, { useState } from 'react';
 import { formatDateTime } from '../../utils/helpers';
 import {
-  Users,
   ShieldCheck,
   ShieldAlert,
   CheckCircle,
   XCircle,
   FileText,
-  AlertTriangle,
-  UserCheck,
-  Search,
-  Eye,
   Camera,
-  ExternalLink,
 } from 'lucide-react';
 
 interface KYCVerification {

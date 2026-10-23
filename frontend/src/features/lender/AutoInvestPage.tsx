@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-import { formatCurrency, formatPercentage } from '../../utils/helpers';
+import { formatCurrency } from '../../utils/helpers';
 import {
   Target,
   Zap,
   CheckCircle,
   Shield,
-  Layers,
-  Settings,
-  AlertCircle,
   Save,
   Clock,
   Sparkles,

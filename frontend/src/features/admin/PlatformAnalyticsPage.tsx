@@ -1,14 +1,9 @@
 import React from 'react';
 import { formatCurrency } from '../../utils/helpers';
 import {
-  BarChart3,
   TrendingUp,
   DollarSign,
-  Users,
-  Activity,
   ShieldCheck,
-  AlertTriangle,
-  ArrowUpRight,
   Layers,
 } from 'lucide-react';
 import {
@@ -21,7 +16,6 @@ import {
   YAxis,
   Tooltip,
   CartesianGrid,
-  Legend,
   Cell,
 } from 'recharts';
 
@@ -140,7 +134,7 @@ const PlatformAnalyticsPage: React.FC = () => {
                     borderColor: 'rgba(255, 255, 255, 0.1)',
                     borderRadius: 'var(--radius-md)',
                   }}
-                  formatter={(val: number) => [`$${val.toLocaleString()}`, '']}
+                  formatter={(val: any) => [`$${Number(val).toLocaleString()}`, '']}
                 />
                 <Area type="monotone" dataKey="volume" name="Requested" stroke="#6366f1" fill="url(#volGrad)" />
                 <Area type="monotone" dataKey="funded" name="Funded" stroke="#10b981" fill="url(#fundGrad)" />
@@ -177,7 +171,7 @@ const PlatformAnalyticsPage: React.FC = () => {
                     borderColor: 'rgba(255, 255, 255, 0.1)',
                     borderRadius: 'var(--radius-md)',
                   }}
-                  formatter={(val: number) => [`$${val.toLocaleString()}`, 'Total Volume']}
+                  formatter={(val: any) => [`$${Number(val).toLocaleString()}`, 'Total Volume']}
                 />
                 <Bar dataKey="volume" radius={[4, 4, 0, 0]}>
                   {riskDistribution.map((entry, index) => (

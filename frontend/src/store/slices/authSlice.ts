@@ -219,7 +219,7 @@ const authSlice = createSlice({
         state.user = action.payload;
         state.isAuthenticated = true;
       })
-      .addCase(fetchProfile.rejected, (state) => {
+      .addCase(fetchProfile.rejected, () => {
         // Keep existing user if already set
       });
 
